@@ -26,3 +26,17 @@ func Index(c *gin.Context) {
 		"robotSuccessRate": math.Ceil(robotSuccessRate * 100),
 	})
 }
+
+func Execute(c *gin.Context) {
+	c.Request.ParseForm()
+	var isRobotPlay = c.Request.Form["isRobotPlay"][0] == "Yes"
+	var isSuccess bool
+	if isRobotPlay {
+		isSuccess = (robotSuccessRate > rand.Float64())
+	} else {
+		isSuccess = (humanSuccessRate > rand.Float64())
+	}
+	c.HTML(200, "result.html", gin.H{
+		"isSuccess": isSuccess,
+	})
+}

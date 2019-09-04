@@ -14,7 +14,7 @@
     margin-bottom: 30px;
 }
 
-a.choice {
+input.choice {
     font-size: 2.5rem !important;
     color: white;
     background-color: #155179;
@@ -22,7 +22,7 @@ a.choice {
     transition: all .3s;
 }
 
-a.choice:hover {
+input.choice:hover {
     color: white;
     background-color: #007fd4;
 }
@@ -40,4 +40,8 @@ a.choice:hover {
 
 .performances-rates {
     text-align: right;
+}
+
+.result-text {
+    font-size: 2.5rem;
 }

@@ -19,6 +19,7 @@ func main() {
 
 	// Root
 	router.GET("/", controllers.Index)
+	router.POST("/execute", controllers.Execute)
 
 	router.Run(":8080")
 }

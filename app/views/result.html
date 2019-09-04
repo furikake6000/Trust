@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+        integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="tray">
+        {{ if .isSuccess }}
+        <img src="assets/images/success.png" width="300px" class="front-image" />
+        <p class="result-text">Success!</p>
+        <p>おめでとうございます。成功です。</p>
+        {{ else }}
+        <img src="assets/images/failure.png" width="300px" class="front-image" />
+        <p class="result-text">Failure...</p>
+        <p>残念。失敗です。</p>
+        {{ end }}
+
+        <div>
+            <a href="/" class="button is-primary is-large is-fullwidth">Next</a>
+        </div>
+    </div>
+</body>
+
+</html>

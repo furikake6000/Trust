@@ -28,14 +28,16 @@
         <p class="question">
             Q: ロボットに操作を任せますか？
         </p>
-        <div class="columns">
-            <div class="column">
-                <a href="unity:yes" class="choice button is-large is-fullwidth">Yes</a>
+        <form action="/execute" method="post">
+            <div class="columns">
+                <div class="column">
+                    <input type="submit" name="isRobotPlay" value="Yes" class="choice button is-large is-fullwidth" />
+                </div>
+                <div class="column">
+                    <input type="submit" name="isRobotPlay" value="No" class="choice button is-large is-fullwidth" />
+                </div>
             </div>
-            <div class="column">
-                <a href="unity:no" class="choice button is-large is-fullwidth">No</a>
-            </div>
-        </div>
+        </form>
     </div>
 </body>
 
