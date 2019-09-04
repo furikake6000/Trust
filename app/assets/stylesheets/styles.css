@@ -4,6 +4,16 @@
     margin: auto;
 }
 
+.text-xxlarge {
+    font-size: 3rem;
+}
+.text-xlarge {
+    font-size: 2.5rem;
+}
+.text-large {
+    font-size: 2rem;
+}
+
 .question {
     font-size: 3rem;
     margin-bottom: 20px;

@@ -13,6 +13,12 @@
 <body>
     <div class="tray">
         <div class="control-panel">
+            {{ if .mutualSelectionMode }}
+            <span>相互選択モード</span>
+            {{ else }}
+            <span>ユーザ選択モード</span>
+            {{ end }}
+            <a href="/switch" class="button is-primary is-large">Switch system</a>
             <a href="/reset" class="button is-danger is-large">Reset</a>
         </div>
         <img src="assets/images/robot.png" width="300px" class="front-image" />
@@ -28,6 +34,7 @@
                 </div>
             </div>
         </div>
+        {{ if eq .robotsSelection -1 }}
         <p class="question">
             Q: ロボットに操作を任せますか？
         </p>
@@ -41,6 +48,28 @@
                 </div>
             </div>
         </form>
+        {{ else }}
+        <p class="text-large">
+            ロボットによる選択がなされました:
+        </p>
+        {{ if eq .robotsSelection 1 }}
+        <p class="text-xxlarge">
+            次回操作の担当は ロボット です
+        </p>
+        <form action="/execute" method="post">
+            <input type="hidden" name="isRobotPlay" value="Yes" />
+            <input type="submit" value="OK" class="choice button is-large is-fullwidth" />
+        </form>
+        {{ else }}
+        <p class="text-xxlarge">
+            次回操作の担当は あなた です
+        </p>
+        <form action="/execute" method="post">
+            <input type="hidden" name="isRobotPlay" value="No" />
+            <input type="submit" value="OK" class="choice button is-large is-fullwidth" />
+        </form>
+        {{ end }}
+        {{ end }}
     </div>
 </body>
 

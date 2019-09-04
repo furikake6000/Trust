@@ -20,6 +20,7 @@ func main() {
 	// Root
 	router.GET("/", controllers.Index)
 	router.GET("/reset", controllers.Reset)
+	router.GET("/switch", controllers.Switch)
 	router.POST("/execute", controllers.Execute)
 
 	router.Run(":8080")
