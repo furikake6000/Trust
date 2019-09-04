@@ -15,7 +15,10 @@ var (
 
 func init() {
 	rand.Seed(time.Now().UnixNano())
+	reset()
+}
 
+func reset() {
 	robotSuccessRate = rand.Float64()
 	humanSuccessRate = rand.Float64()
 }
@@ -25,6 +28,12 @@ func Index(c *gin.Context) {
 		"humanSuccessRate": math.Ceil(humanSuccessRate * 100),
 		"robotSuccessRate": math.Ceil(robotSuccessRate * 100),
 	})
+}
+
+func Reset(c *gin.Context) {
+	reset()
+
+	c.Redirect(302, "/")
 }
 
 func Execute(c *gin.Context) {

@@ -45,3 +45,8 @@ input.choice:hover {
 .result-text {
     font-size: 2.5rem;
 }
+
+.control-panel {
+    margin-top: 10px;
+    text-align: right;
+}
