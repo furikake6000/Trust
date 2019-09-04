@@ -5,17 +5,36 @@
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
         integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
 </head>
 
 <body>
-    <div class="columns">
-        <div class="column">
-            <a href="unity:yes" class="button is-large is-fullwidth">Yes</a>
+    <div class="tray">
+        <img src="assets/images/robot.png" width="300px" class="front-image" />
+        <div class="performances">
+            <div class="columns">
+                <div class="column is-three-quarters performances-players">
+                    <p>ロボットの作業成功率:</p>
+                    <p>あなたの作業成功率:</p>
+                </div>
+                <div class="column performances-rates">
+                    <p>???%</p>
+                    <p>45%</p>
+                </div>
+            </div>
         </div>
-        <div class="column">
-            <a href="unity:no" class="button is-large is-fullwidth">No</a>
+        <p class="question">
+            Q: ロボットに操作を任せますか？
+        </p>
+        <div class="columns">
+            <div class="column">
+                <a href="unity:yes" class="choice button is-large is-fullwidth">Yes</a>
+            </div>
+            <div class="column">
+                <a href="unity:no" class="choice button is-large is-fullwidth">No</a>
+            </div>
         </div>
     </div>
 </body>
